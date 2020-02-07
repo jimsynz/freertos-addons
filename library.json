@@ -1,0 +1,33 @@
+{
+  "name": "freertos-addons",
+  "version": "1.6.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelbecker/freertos-addons"
+  },
+  "description": "freertos-addons",
+  "authors": [{
+    "name": "Michael Becker",
+    "email": "michael.f.becker@gmail.com",
+    "url": "https://github.com/michaelbecker"
+  }],
+  "homepage": "https://michaelbecker.github.io/freertos-addons/",
+  "export": {
+    "include": [
+      "c++/Source/*.cpp",
+      "c++/Source/include/*.hpp"
+    ]
+  },
+  "build": {
+    "srcFilter": [
+      "+<c++/Source/*.cpp>",
+      "+<c++/Source/include/*.hpp>"
+    ],
+    "flags": [
+      "-I c++/Source/include",
+      "-D CPP_FREERTOS_NO_EXCEPTIONS"
+    ]
+  },
+  "includeDir": "c++/Source/include/",
+  "srcDir": "c++/Source"
+}
